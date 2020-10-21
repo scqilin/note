@@ -26,4 +26,10 @@ AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一
 
 
 
-![image-20201021115354669](README.assets/image-20201021115354669.png)
+javascript权威指南 犀牛书。必看，买纸质数。
+
+高性能JavsScript 猫头鹰。看电子书即可。
+
+JavsScript语言精粹 蝴蝶。选看，电子，二手。
+
+JavsScript模式 鸟。  进阶看（不是JavsScript设计模式）。

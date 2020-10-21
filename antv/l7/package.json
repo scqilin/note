@@ -1,0 +1,26 @@
+{
+  "name": "tswebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config ./webpack.config.js --mode development",
+    "server": "webpack-dev-server --config ./webpack.config.js --mode development"
+  },
+  "author": "qilin",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "ts-loader": "^8.0.6",
+    "typescript": "^4.0.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@antv/l7": "^2.2.40",
+    "@antv/l7-district": "^2.2.39",
+    "@antv/l7-maps": "^2.2.40"
+  }
+}
