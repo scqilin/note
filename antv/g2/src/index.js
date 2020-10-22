@@ -2,6 +2,7 @@
 let dom = document.createElement('div');
 document.body.appendChild(dom);
 dom.id = "c2";
+dom.style.padding = '20px'
 
 const cdata = {
     "value": 1.68,
@@ -31,15 +32,30 @@ let data = [
     // { genre: 'Other', sold: 150},
 
     { genre: 'Sports', sold: 275, type: "A" },
-    { genre: 'Strategy', sold: 115, type: "A" },
-    { genre: 'Action', sold: 120, type: "A" },
-    { genre: 'Shooter', sold: 350, type: "A" },
-    { genre: 'Other', sold: 150, type: "A" },
+    { genre: 'Strategy', sold: 215, type: "A" },
+    { genre: 'Action', sold: 180, type: "A" },
+    { genre: 'Shooter', sold: 150, type: "A" },
+    { genre: 'Other', sold: 100, type: "A" },
+
     { genre: 'Sports', sold: 175, type: "B" },
     { genre: 'Strategy', sold: 175, type: "B" },
     { genre: 'Action', sold: 246, type: "B" },
     { genre: 'Shooter', sold: 150, type: "B" },
     { genre: 'Other', sold: 250, type: "B" },
+
+    { genre: 'Sports', value: 10, type: "C" },
+    { genre: 'Strategy', value: 20, type: "C" },
+    { genre: 'Action', value: 30, type: "C" },
+    { genre: 'Shooter', value: 40, type: "C" },
+    { genre: 'Other', value: 50, type: "C" },
+
+    { genre: 'Sports', age: 14, type: "D" },
+    { genre: 'Strategy', age: 20, type: "D" },
+    { genre: 'Action', age: 13, type: "D" },
+    { genre: 'Shooter', age: 18, type: "D" },
+    { genre: 'Other', age: 21, type: "D" },
+
+
 ];
 const chart = new G2.Chart({
     container: 'c2',
@@ -52,14 +68,24 @@ chart.scale('sold', {
     nice: true,
     min:0
   });
+  chart.scale('value', {
+    nice: true,
+    min:0
+  });
+  chart.scale('age', {
+    nice: true,
+    min:0,
+    translate:[10,0]
+  });
 //   chart.scale('Data', {
 //     range: [0, 1],
 //     tickCount: 10,
 //     type: 'timeCat'
 //   });
-// chart.interval().position('genre*sold');
+chart.interval().position('genre*value');
 chart.line().position('genre*sold').color('type')//.adjust('stack')
 chart.area().position('genre*sold').color('type')//.adjust('stack')
+chart.line().position('genre*age').color('type')//.adjust('stack')
 // chart.point().position('genre*sold')
 //     .color('type')
 //     // .shape('type', ['circle', 'square', 'triangle'])
