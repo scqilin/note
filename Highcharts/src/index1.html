@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./highcharts.js"></script>
+</head>
+
+<body>
+    <div id="container" style="width: 600px;height:400px;"></div>
+    <script>
+        var options = {
+            chart: {
+                type: 'bar'                          //指定图表的类型，默认是折线图（line）
+            },
+            credits:{
+                enabled : false
+            },
+            title: {
+                text: '我的第一个图表',                 // 标题
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['苹果', '香蕉', '橙子']   // x 轴分类
+            },
+            yAxis: [
+                {
+                    title: {
+                        text: '吃水果个数'                // y 轴标题
+                    }
+                },
+                {
+                    title: {
+                        text: '喝了果汁'                // y 轴标题
+                    }
+                }
+            ],
+            series: [
+                {                              // 数据列
+                    name: '小明',
+                    yAxis: 1,                        // 数据列名
+                    data: [1, 0, 4]                     // 数据
+                },
+                {
+                    name: '小红',
+                    data: [5, 7, 3]
+                }
+            ],
+            
+        };
+        // 图表初始化函数
+        var chart = Highcharts.chart('container', options);
+        // chart.credits.enabled = false;
+
+        console.log(chart.title.textStr)
+    </script>
+</body>
+
+</html>
