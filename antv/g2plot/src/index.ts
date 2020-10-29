@@ -48,6 +48,7 @@ const linePlot = new G2Plot.Area('container', {
     data,
     xField: 'year',
     yField: 'value',
+    theme: 'dark',
     yAxis:{
         // label:{
         //     formatter:(v)=>{
@@ -131,6 +132,7 @@ const linePlot2 = new G2Plot.Column('container2', {
     yField: 'value',
     seriesField: 'type',
     isStack:true,
+    theme: 'dark',
     // smooth:true,
     // line:{      
         

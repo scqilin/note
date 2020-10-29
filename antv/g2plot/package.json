@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --config ./webpack.config.js --mode development",
+    "dev": "webpack --config ./webpack.config.js --mode production",
     "server": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@antv/g2": "^4.1.0-beta.14",
     "@antv/g2plot": "^2.0.4"
   }
 }

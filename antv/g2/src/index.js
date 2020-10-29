@@ -61,7 +61,7 @@ const chart = new G2.Chart({
     container: 'c2',
     width: 600,
     height: 300,
-    // theme: 'dark',
+    theme: 'dark',
 });
 chart.data(data);
 chart.scale('sold', {
