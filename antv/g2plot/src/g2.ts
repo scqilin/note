@@ -19,28 +19,50 @@ const chart = new Chart({
   container: 'container',
   autoFit: true,
   height: 500,
-  theme:'dark'
+  // theme:'dark'
 });
 
 chart.data(data);
 chart.scale({
-  year: {
-    range: [0, 1],
-  },
+  // year: {
+  //   range: [0, 1],
+  // },
   value: {
     min: 0,
     nice: true,
   },
 });
 
-chart.tooltip({
-  showCrosshairs: true, // 展示 Tooltip 辅助线
-  shared: true,
+// chart.tooltip({
+//   showCrosshairs: true, // 展示 Tooltip 辅助线
+//   shared: true,
+// });
+
+// chart.line().position('year*value').label('value');
+// // chart.point().position('year*value');
+
+// chart.render();
+chart
+.line()
+.position('year*value')
+.color('#fff000')
+.size(2);
+chart.axis('year', {
+  line: null,
+  tickLine: null,
+  grid: {
+    line: {
+      style: {
+        lineDash: null,
+      },
+    },
+  },
 });
-
-chart.line().position('year*value').label('value');
-// chart.point().position('year*value');
-
+chart.coordinate('polar', {
+  radius: 0.8,
+})
 chart.render();
+
+
 
 
