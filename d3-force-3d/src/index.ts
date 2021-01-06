@@ -145,7 +145,7 @@ let data1 = {
 }
 
 
-let num = 1024;
+let num = 10240;
 
 let nodes2 = [...Array(num).keys()].map(i => ({ id: i }));
 let links2 = [...Array(num).keys()]
